@@ -7,54 +7,66 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
   <title>Frontend Mentor | Interactive rating component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
-
   <!-- Rating state start -->
+  <main class="card">
+    <form class="" id="form-card">
+      <!-- Star -->
+      <picture class="star">
+        <img src="./images/icon-star.svg" alt="star icon" />
+      </picture>
+      <!-- Title -->
+      <h2 class="card-header">How did we do?</h2>
+      <!-- Text -->
+      <p class="card-text">Please let us know how we did with your support request. All feedback is appreciated
+        to help us improve our offering!</p>
+      <!-- Rating -->
+      <div class="card-rating-numbers">
+        <button class="buttons" type="button" value="1">1</button>
+        <button class="buttons" type="button" value="2">2</button>
+        <button class="buttons" type="button" value="3">3</button>
+        <button class="buttons" type="button" value="4">4</button>
+        <button class="buttons" type="button" value="5">5</button>
+      </div>
+      <!-- Button -->
+      <button class="submit-button" type="submit">SUBMIT</button>
+      <div class="none errorMessage" id="error">Please provide a value</div>
+    </form>
+    <!-- Rating state end -->
 
-  How did we do?
+    <section class="none" id="thank-you-card">
 
-  Please let us know how we did with your support request. All feedback is appreciated
-  to help us improve our offering!
+      <picture class="thank-you-image center">
+        <img src="./images/illustration-thank-you.svg" alt="picture illustration" />
+      </picture>
+      <!-- Thank you state start -->
+      <p class="rate center">You selected <span></span> out of 5</p>
 
-  1 2 3 4 5
+      <h2 class="card-header center">Thank you!</h2>
 
-  Submit
+      <p class="card-text center">We appreciate you taking the time to give a rating. If you ever need more support,
+        don't hesitate to get in touch!</p>
 
-  <!-- Rating state end -->
+      <!-- Thank you state end -->
+    </section>
 
-  <!-- Thank you state start -->
-
-  You selected
-  <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support,
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
+  </main>
 
 
-  <div class="attribution">
+
+  <footer>
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="https://www.github.com/mark-escosura">Mark Escosura</a>.
+  </footer>
+  <script src="main.js"></script>
 </body>
 
 </html>
