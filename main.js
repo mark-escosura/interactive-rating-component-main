@@ -5,24 +5,26 @@ window.addEventListener('load', () => {
   const thankYouCard = document.getElementById('thank-you-card');
   const rate = document.querySelector('span');
   const error = document.getElementById('error');
+  error.style.display = 'none';
   buttons.forEach((button) => {
     button.addEventListener('click', () => {
       buttons.forEach((item) => {
         item.classList.remove('clicked');
       });
       button.classList.add('clicked');
-
+      error.style.display = 'none';
       value = button.value;
     });
-    error.classList.remove('none');
   });
 
   formCard.addEventListener('submit', (e) => {
     e.preventDefault();
     if (value === 0) {
-      error.classList.remove('none');
+      error.style.display = 'grid';
+      setTimeout(() => {
+        error.style.display = 'none';
+      }, 3500);
     } else {
-      error.classList.add('none');
       formCard.classList.add('none');
       thankYouCard.classList.remove('none');
       rate.innerText = value;

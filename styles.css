@@ -38,12 +38,16 @@ body {
   display: none;
 }
 
+.center {
+  text-align: center;
+}
+
 /* Main Card styles */
 
 #form-card, #thank-you-card {
   width: 400px;
   background-color: var(--color-dark-blue);
-  border-radius: 15px;
+  border-radius: 30px;
   padding: 30px;
 }
 
@@ -52,10 +56,6 @@ body {
   margin-top: 20px;
   margin-bottom: 10px;
   font-size: 2.5em;
-}
-
-.center {
-  text-align: center;
 }
 
 .card-text {
@@ -125,8 +125,6 @@ body {
 }
 
 /* second card */
-
-
 
 .thank-you-image {
   display: grid;
