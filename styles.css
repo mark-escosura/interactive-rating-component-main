@@ -86,6 +86,7 @@ body {
   background-color:var(--color-primary);
   color:var(--color-white);
   cursor: pointer;
+  transition: 0.8s ease-out;
 }
 
 .buttons-greyed {
@@ -95,7 +96,7 @@ body {
 
 .clicked {
   color: var(--color-white);
-  background-color:var(--color-primary); 
+  background-color:var(--color-light-grey); 
 }
 
 .grey {
