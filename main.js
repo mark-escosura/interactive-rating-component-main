@@ -2,17 +2,28 @@ window.addEventListener('load', () => {
   let value = 0;
   const buttons = document.querySelectorAll('.buttons');
   const formCard = document.getElementById('form-card');
-  const thankYouCard = document.getElementById('thank-you-card');
-  const rate = document.querySelector('span');
-  const error = document.getElementById('error');
-  error.style.display = 'none';
+
+  const displayErrorStyle = (style) => {
+    document.getElementById('error').style.display = style;
+  };
+
+  const displayThankYouCard = (style) => {
+    document.getElementById('thank-you-card').style.display = style;
+  };
+
+  const removeFormCard = (style) => {
+    document.getElementById('form-card').style.display = style;
+  };
+
+  displayErrorStyle('none');
+
   buttons.forEach((button) => {
     button.addEventListener('click', () => {
       buttons.forEach((item) => {
         item.classList.remove('clicked');
       });
       button.classList.add('clicked');
-      error.style.display = 'none';
+      displayErrorStyle('none');
       value = button.value;
     });
   });
@@ -20,14 +31,14 @@ window.addEventListener('load', () => {
   formCard.addEventListener('submit', (e) => {
     e.preventDefault();
     if (value === 0) {
-      error.style.display = 'grid';
+      displayErrorStyle('grid');
       setTimeout(() => {
-        error.style.display = 'none';
+        displayErrorStyle('none');
       }, 3500);
     } else {
-      formCard.classList.add('none');
-      thankYouCard.classList.remove('none');
-      rate.innerText = value;
+      removeFormCard('none');
+      displayThankYouCard('grid');
+      document.querySelector('span').innerText = value;
     }
   });
 });

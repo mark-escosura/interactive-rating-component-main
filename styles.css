@@ -98,6 +98,10 @@ body {
   background-color:var(--color-primary); 
 }
 
+.grey {
+  background-color:var(--color-light-grey);
+}
+
 .submit-button {
   font-size: var(--font-size-text);
   width: 340px;
